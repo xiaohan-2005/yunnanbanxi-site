@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>云南班锡工艺｜茶席静雅 · 品牌展示</title>
+  <meta name="description" content="云南班锡工艺品品牌展示：茶具、酒具、收藏品与工艺过程。无电商，仅展示与宣传。" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- 顶部滚动进度条 -->
+  <div class="top-progress" id="topProgress" aria-hidden="true"></div>
+
+  <!-- 顶部导航 -->
+  <header class="header" id="header">
+    <div class="nav-wrap">
+      <a class="brand" href="#top" aria-label="返回顶部">
+        <span class="brand__mark">斑锡</span>
+        <span class="brand__name">云南班锡工艺</span>
+      </a>
+
+      <nav class="nav" aria-label="主导航">
+        <a class="nav__link" href="#story">品牌故事</a>
+        <a class="nav__link" href="#craft">匠心工艺</a>
+        <a class="nav__link" href="#featured">精选分类</a>
+        <a class="nav__link" href="#gallery">作品分类</a>
+        <a class="nav__link" href="#visit">联系与参观</a>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="打开菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- 移动端菜单 -->
+    <div class="mnav" id="mnav" aria-hidden="true">
+      <a href="#story" class="mnav__link">品牌故事</a>
+      <a href="#craft" class="mnav__link">匠心工艺</a>
+      <a href="#featured" class="mnav__link">精选分类</a>
+      <a href="#gallery" class="mnav__link">作品分类</a>
+      <a href="#visit" class="mnav__link">联系与参观</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero：全屏轮播（用你已有图片，不新增命名） -->
+  <section class="hero hero--slider" aria-label="首屏轮播">
+  <div class="heroSlider" id="heroSlider">
+    <div class="heroSlide is-active" data-bg="images/hero.jpg">
+      <div class="hero__overlay"></div>
+      <div class="hero__content container">
+        <p class="hero__kicker">茶席静雅 · 器物之光</p>
+        <h1 class="hero__title">一器一纹理，一席一光泽</h1>
+        <p class="hero__sub">克制的线条与温润的光泽，让器物回到日常。</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#featured">浏览精选</a>
+          <a class="btn btn--ghost" href="#gallery">查看全部作品</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="heroSlide" data-bg="images/tea-1.jpg">
+      <div class="hero__overlay"></div>
+      <div class="hero__content container">
+        <p class="hero__kicker">Coffee & Tea</p>
+        <h2 class="hero__title hero__title--small">茶具系列</h2>
+        <p class="hero__sub">茶席留白与细节质感，让每一次冲泡更安静。</p>
+        <div class="hero__actions">
+          <button class="btn btn--primary js-jump-filter" data-filter="tea">只看茶具</button>
+          <a class="btn btn--ghost" href="#craft">看工艺过程</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="heroSlide" data-bg="images/collect-1.jpg">
+      <div class="hero__overlay"></div>
+      <div class="hero__content container">
+        <p class="hero__kicker">Collectibles</p>
+        <h2 class="hero__title hero__title--small">收藏品款式</h2>
+        <p class="hero__sub">更适合陈设与典藏，时间会把纹理打磨得更耐看。</p>
+        <div class="hero__actions">
+          <button class="btn btn--primary js-jump-filter" data-filter="collect">只看收藏</button>
+          <a class="btn btn--ghost" href="#visit">联系与参观</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="heroNav container" aria-label="轮播控制">
+    <button class="heroDot is-active" data-slide="0" aria-label="第 1 张"></button>
+    <button class="heroDot" data-slide="1" aria-label="第 2 张"></button>
+    <button class="heroDot" data-slide="2" aria-label="第 3 张"></button>
+
+    <div class="heroArrows">
+      <button class="heroArrow" id="heroPrev" aria-label="上一张">←</button>
+      <button class="heroArrow" id="heroNext" aria-label="下一张">→</button>
+    </div>
+  </div>
+
+  <a class="hero__scroll" href="#story" aria-label="向下滚动">↓</a>
+
+  <!-- 轮播进度条：必须在 hero 里 -->
+  <div class="heroProgress" aria-hidden="true">
+    <div class="heroProgress__bar" id="heroProgressBar"></div>
+  </div>
+</section>
+
+    <!-- 品牌故事 -->
+    <section class="section container reveal" id="story">
+      <div class="section__head">
+        <p class="section__eyebrow">Brand Story</p>
+        <h2 class="section__title">器物，不止于器物</h2>
+        <p class="section__desc">
+          班锡工艺以克制的线条、温润的光泽与独特的手作纹理，
+          将云南在地文化与当代生活审美连接在一起。建议文案短、留白多。
+        </p>
+      </div>
+
+      <div class="grid grid--3">
+        <div class="card card--soft">
+          <h3 class="card__title">手作纹理</h3>
+          <p class="card__text">每一道锤痕都是时间留下的签名。近看纹理，远看气韵。</p>
+        </div>
+        <div class="card card--soft">
+          <h3 class="card__title">当代审美</h3>
+          <p class="card__text">传统工艺以现代语言表达，让器物融入茶席、餐桌与空间陈设。</p>
+        </div>
+        <div class="card card--soft">
+          <h3 class="card__title">礼与日常</h3>
+          <p class="card__text">酒具的雅、收藏的久——都在比例与触感里呈现“体面”。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 匠心工艺（敲打 4 张） -->
+    <section class="section section--dark reveal" id="craft">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__eyebrow">Craftsmanship</p>
+          <h2 class="section__title">敲打之间，成就光泽</h2>
+          <p class="section__desc">真实的工艺过程，是品牌质感最强的证明。</p>
+        </div>
+
+        <div class="storyline">
+          <div class="storyline__item">
+            <div class="storyline__img js-lightbox" data-large="images/craft-1.jpg">
+              <img src="images/craft-1.jpg" alt="手工敲打过程 1" loading="lazy">
+            </div>
+            <div class="storyline__text">
+              <h3>锻打成型</h3>
+              <p>反复敲击塑形，让器物轮廓更利落，也让金属纹理更有生命力。</p>
+            </div>
+          </div>
+
+          <div class="storyline__item">
+            <div class="storyline__img js-lightbox" data-large="images/craft-2.jpg">
+              <img src="images/craft-2.jpg" alt="手工敲打过程 2" loading="lazy">
+            </div>
+            <div class="storyline__text">
+              <h3>细节修整</h3>
+              <p>边缘、弧度、比例与手感的微调，决定最终呈现的克制与稳定。</p>
+            </div>
+          </div>
+
+          <div class="storyline__item">
+            <div class="storyline__img js-lightbox" data-large="images/craft-3.jpg">
+              <img src="images/craft-3.jpg" alt="手工敲打过程 3" loading="lazy">
+            </div>
+            <div class="storyline__text">
+              <h3>抛光呈现</h3>
+              <p>光泽不是“亮”，而是“润”。它来自时间与工艺叠加的结果。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="craft-strip">
+          <div class="craft-strip__img js-lightbox" data-large="images/craft-4.jpg">
+            <img src="images/craft-4.jpg" alt="手工敲打过程 4" loading="lazy">
+          </div>
+          <div class="craft-strip__text">
+            <div class="craft-strip__title">工坊瞬间</div>
+            <div class="craft-strip__desc">锤声落下，光泽浮现；器物的耐看，来自耐心。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 精选分类（大块卡片，更像品牌官网结构） -->
+    <section class="section container reveal" id="featured">
+      <div class="section__head">
+        <p class="section__eyebrow">Featured Categories</p>
+        <h2 class="section__title">精选分类</h2>
+        <p class="section__desc">点击直接跳到作品区并自动筛选。</p>
+      </div>
+
+      <div class="featureGrid">
+        <button class="featureTile js-jump-filter" data-filter="tea" data-bg="images/tea-2.jpg">
+          <span class="featureTile__tag">Coffee & Tea</span>
+          <span class="featureTile__title">茶具</span>
+          <span class="featureTile__sub">清雅 · 留白 · 温润</span>
+        </button>
+
+        <button class="featureTile js-jump-filter" data-filter="wine" data-bg="images/wine-1.jpg">
+          <span class="featureTile__tag">Wine & Spirits</span>
+          <span class="featureTile__title">酒具</span>
+          <span class="featureTile__sub">礼赠 · 雅趣 · 分寸</span>
+        </button>
+
+        <button class="featureTile js-jump-filter" data-filter="collect" data-bg="images/collect-2.jpg">
+          <span class="featureTile__tag">Collectibles</span>
+          <span class="featureTile__title">收藏</span>
+          <span class="featureTile__sub">陈设 · 典藏 · 传承</span>
+        </button>
+
+        <button class="featureTile js-jump-filter" data-filter="craft" data-bg="images/craft-2.jpg">
+          <span class="featureTile__tag">Heritage Craft</span>
+          <span class="featureTile__title">工艺</span>
+          <span class="featureTile__sub">锻打 · 成型 · 抛光</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 作品分类（瀑布流 + hover 更精致） -->
+    <section class="section container reveal" id="gallery">
+      <div class="section__head">
+        <p class="section__eyebrow">Collections</p>
+        <h2 class="section__title">作品分类</h2>
+        <p class="section__desc">悬停看信息，点击放大看细节。</p>
+      </div>
+
+      <div class="filters" role="tablist" aria-label="作品分类筛选">
+        <button class="chip is-active" data-filter="all">全部</button>
+        <button class="chip" data-filter="tea">茶具</button>
+        <button class="chip" data-filter="wine">酒具</button>
+        <button class="chip" data-filter="collect">收藏品</button>
+        <button class="chip" data-filter="craft">工艺过程</button>
+      </div>
+
+      <div class="masonry" id="masonry">
+        <!-- 茶 8 -->
+        <figure class="mcard js-card" data-cat="tea" data-large="images/tea-1.jpg"><img src="images/tea-1.jpg" alt="茶具作品 1" loading="lazy"><figcaption class="mcard__cap"><span>茶具系列</span><em>清雅 · 克制 · 光泽</em></figcaption></figure>
+        <figure class="mcard js-card" data-cat="tea" data-large="images/tea-2.jpg"><img src="images/tea-2.jpg" alt="茶具作品 2" loading="lazy"><figcaption class="mcard__cap"><span>茶具系列</span><em>器型 · 比例 · 手感</em></figcaption></figure>
+        <figure class="mcard js-card" data-cat="tea" data-large="images/tea-3.jpg"><img src="images/tea-3.jpg" alt="茶具作品 3" loading="lazy"><figcaption class="mcard__cap"><span>茶具系列</span><em>日常 · 茶席 · 陪伴</em></figcaption></figure>
+        <figure class="mcard js-card" data-cat="tea" data-large="images/tea-4.jpg"><img src="images/tea-4.jpg" alt="茶具作品 4" loading="lazy"><figcaption class="mcard__cap"><span>茶具系列</span><em>温润 · 质感 · 耐看</em></figcaption></figure>
+        <figure class="mcard js-card" data-cat="tea" data-large="images/tea-5.jpg"><img src="images/tea-5.jpg" alt="茶具作品 5" loading="lazy"><figcaption class="mcard__cap"><span>茶具系列</span><em>光影 · 纹理 · 留白</em></figcaption></figure>
+        <figure class="mcard js-card" data-cat="tea" data-large="images/tea-6.jpg"><img src="images/tea-6.jpg" alt="茶具作品 6" loading="lazy"><figcaption class="mcard__cap"><span>茶具系列</span><em>席面 · 气息 · 稳定</em></figcaption></figure>
+        <figure class="mcard js-card" data-cat="tea" data-large="images/tea-7.jpg"><img src="images/tea-7.jpg" alt="茶具作品 7" loading="lazy"><figcaption class="mcard__cap"><span>茶具系列</span><em>匠造 · 手作 · 细节</em></figcaption></figure>
+        <figure class="mcard js-card" data-cat="tea" data-large="images/tea-8.jpg"><img src="images/tea-8.jpg" alt="茶具作品 8" loading="lazy"><figcaption class="mcard__cap"><span>茶具系列</span><em>雅 · 静 · 余韵</em></figcaption></figure>
+
+        <!-- 酒 6 -->
+        <figure class="mcard js-card" data-cat="wine" data-large="images/wine-1.jpg"><img src="images/wine-1.jpg" alt="酒具作品 1" loading="lazy"><figcaption class="mcard__cap"><span>酒具系列</span><em>礼赠 · 雅趣 · 体面</em></figcaption></figure>
+        <figure class="mcard js-card" data-cat="wine" data-large="images/wine-2.jpg"><img src="images/wine-2.jpg" alt="酒具作品 2" loading="lazy"><figcaption class="mcard__cap"><span>酒具系列</span><em>醇厚 · 光泽 · 分寸</em></figcaption></figure>
+        <figure class="mcard js-card" data-cat="wine" data-large="images/wine-3.jpg"><img src="images/wine-3.jpg" alt="酒具作品 3" loading="lazy"><figcaption class="mcard__cap"><span>酒具系列</span><em>仪式感 · 线条 · 稳重</em></figcaption></figure>
+        <figure class="mcard js-card" data-cat="wine" data-large="images/wine-4.jpg"><img src="images/wine-4.jpg" alt="酒具作品 4" loading="lazy"><figcaption class="mcard__cap"><span>酒具系列</span><em>场景 · 餐桌 · 礼序</em></figcaption></figure>
+        <figure class="mcard js-card" data-cat="wine" data-large="images/wine-5.jpg"><img src="images/wine-5.jpg" alt="酒具作品 5" loading="lazy"><figcaption class="mcard__cap"><span>酒具系列</span><em>细节 · 纹理 · 光影</em></figcaption></figure>
+        <figure class="mcard js-card" data-cat="wine" data-large="images/wine-6.jpg"><img src="images/wine-6.jpg" alt="酒具作品 6" loading="lazy"><figcaption class="mcard__cap"><span>酒具系列</span><em>典雅 · 质感 · 余味</em></figcaption></figure>
+
+        <!-- 收藏 8 -->
+        <figure class="mcard js-card" data-cat="collect" data-large="images/collect-1.jpg"><img src="images/collect-1.jpg" alt="收藏品款式 1" loading="lazy"><figcaption class="mcard__cap"><span>收藏品</span><em>典藏 · 礼赠 · 传承</em></figcaption></figure>
+        <figure class="mcard js-card" data-cat="collect" data-large="images/collect-2.jpg"><img src="images/collect-2.jpg" alt="收藏品款式 2" loading="lazy"><figcaption class="mcard__cap"><span>收藏品</span><em>题材 · 工艺 · 陈设</em></figcaption></figure>
+        <figure class="mcard js-card" data-cat="collect" data-large="images/collect-3.jpg"><img src="images/collect-3.jpg" alt="收藏品款式 3" loading="lazy"><figcaption class="mcard__cap"><span>收藏品</span><em>细节 · 纹理 · 光影</em></figcaption></figure>
+        <figure class="mcard js-card" data-cat="collect" data-large="images/collect-4.jpg"><img src="images/collect-4.jpg" alt="收藏品款式 4" loading="lazy"><figcaption class="mcard__cap"><span>收藏品</span><em>空间 · 气韵 · 稳定</em></figcaption></figure>
+        <figure class="mcard js-card" data-cat="collect" data-large="images/collect-5.jpg"><img src="images/collect-5.jpg" alt="收藏品款式 5" loading="lazy"><figcaption class="mcard__cap"><span>收藏品</span><em>匠造 · 题材 · 纪念</em></figcaption></figure>
+        <figure class="mcard js-card" data-cat="collect" data-large="images/collect-6.jpg"><img src="images/collect-6.jpg" alt="收藏品款式 6" loading="lazy"><figcaption class="mcard__cap"><span>收藏品</span><em>纹理 · 光泽 · 深度</em></figcaption></figure>
+        <figure class="mcard js-card" data-cat="collect" data-large="images/collect-7.jpg"><img src="images/collect-7.jpg" alt="收藏品款式 7" loading="lazy"><figcaption class="mcard__cap"><span>收藏品</span><em>陈设 · 氛围 · 留白</em></figcaption></figure>
+        <figure class="mcard js-card" data-cat="collect" data-large="images/collect-8.jpg"><img src="images/collect-8.jpg" alt="收藏品款式 8" loading="lazy"><figcaption class="mcard__cap"><span>收藏品</span><em>雅 · 静 · 余韵</em></figcaption></figure>
+
+        <!-- 工艺 4 -->
+        <figure class="mcard js-card" data-cat="craft" data-large="images/craft-1.jpg"><img src="images/craft-1.jpg" alt="工艺过程 1" loading="lazy"><figcaption class="mcard__cap"><span>工艺过程</span><em>锻打 · 成型 · 纹理</em></figcaption></figure>
+        <figure class="mcard js-card" data-cat="craft" data-large="images/craft-2.jpg"><img src="images/craft-2.jpg" alt="工艺过程 2" loading="lazy"><figcaption class="mcard__cap"><span>工艺过程</span><em>修整 · 比例 · 手感</em></figcaption></figure>
+        <figure class="mcard js-card" data-cat="craft" data-large="images/craft-3.jpg"><img src="images/craft-3.jpg" alt="工艺过程 3" loading="lazy"><figcaption class="mcard__cap"><span>工艺过程</span><em>火光 · 质感 · 力量</em></figcaption></figure>
+        <figure class="mcard js-card" data-cat="craft" data-large="images/craft-4.jpg"><img src="images/craft-4.jpg" alt="工艺过程 4" loading="lazy"><figcaption class="mcard__cap"><span>工艺过程</span><em>工坊 · 时间 · 光泽</em></figcaption></figure>
+      </div>
+    </section>
+
+    <!-- 联系与参观 -->
+    <section class="section section--thin container reveal" id="visit">
+      <div class="cta">
+        <div class="cta__left">
+          <h2 class="cta__title">联系与参观</h2>
+          <p class="cta__text">可放：展馆地址、预约方式、合作渠道、电话/邮箱/微信二维码等。</p>
+        </div>
+        <div class="cta__right">
+          <a class="btn btn--primary" href="mailto:your@email.com">邮件联系</a>
+          <a class="btn btn--ghost" href="#top">返回顶部</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <div class="footer__logo">斑锡</div>
+          <div class="footer__desc">云南班锡工艺品｜品牌展示站（无电商）</div>
+        </div>
+        <div class="footer__links">
+          <a href="#story">品牌故事</a>
+          <a href="#craft">匠心工艺</a>
+          <a href="#featured">精选分类</a>
+          <a href="#gallery">作品分类</a>
+          <a href="#visit">联系与参观</a>
+        </div>
+        <div class="footer__copy">© 2026 云南班锡工艺. All rights reserved.</div>
+      </div>
+    </footer>
+  </main>
+
+   <!-- Lightbox（原生） -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox__backdrop" data-close="1"></div>
+    <div class="lightbox__dialog" role="dialog" aria-modal="true" aria-label="图片预览">
+      <button class="lightbox__close" id="lbClose" aria-label="关闭">✕</button>
+      <img class="lightbox__img" id="lbImg" alt="" />
+      <div class="lightbox__hint">按 ESC 关闭</div>
+    </div>
+  </div>
+
+  <!-- 背景音乐（只放一份！） -->
+  <audio id="bgm" preload="metadata" loop>
+    <source src="./assets/bgm.mp3" type="audio/mpeg">
+  </audio>
+  <button class="musicBtn" id="musicBtn" aria-label="播放背景音乐">♪</button>
+
+  <!-- 只保留一次 script.js -->
+  <script src="script.js"></script>
+</body>
+</html>
