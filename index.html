@@ -24,6 +24,7 @@
       <nav class="nav" aria-label="主导航">
         <a class="nav__link" href="#story">品牌故事</a>
         <a class="nav__link" href="#craft">匠心工艺</a>
+        <a class="nav__link" href="#process">制作专区</a>
         <a class="nav__link" href="#featured">精选分类</a>
         <a class="nav__link" href="#gallery">作品分类</a>
         <a class="nav__link" href="#visit">联系与参观</a>
@@ -38,6 +39,7 @@
     <div class="mnav" id="mnav" aria-hidden="true">
       <a href="#story" class="mnav__link">品牌故事</a>
       <a href="#craft" class="mnav__link">匠心工艺</a>
+      <a href="#process" class="mnav__link">制作专区</a>
       <a href="#featured" class="mnav__link">精选分类</a>
       <a href="#gallery" class="mnav__link">作品分类</a>
       <a href="#visit" class="mnav__link">联系与参观</a>
@@ -118,6 +120,17 @@
         </p>
       </div>
 
+      <div class="storySplit">
+        <div class="storySplit__img js-lightbox" data-large="images/story.jpg">
+          <img src="images/story.jpg" alt="品牌故事图片" loading="lazy">
+        </div>
+        <div class="storySplit__text">
+          <p>
+            这里可以补充一段品牌故事：例如工艺起源、材料选择、手作坚持与“器物之美”的理念。文字可短可长，建议留白。
+          </p>
+        </div>
+      </div>
+
       <div class="grid grid--3">
         <div class="card card--soft">
           <h3 class="card__title">手作纹理</h3>
@@ -184,6 +197,60 @@
             <div class="craft-strip__desc">锤声落下，光泽浮现；器物的耐看，来自耐心。</div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- 制作专区：视频 + 过程轮播 -->
+    <section class="section container reveal" id="process">
+      <div class="section__head">
+        <p class="section__eyebrow">Process</p>
+        <h2 class="section__title">制作专区</h2>
+        <p class="section__desc">用一段视频与过程照片，呈现从敲打到抛光的细节。</p>
+      </div>
+
+      <div class="processVideo">
+        <video controls preload="metadata">
+          <source src="assets/process.mp4" type="video/mp4">
+          你的浏览器不支持 video 标签。
+        </video>
+      </div>
+
+      <div class="carousel" data-carousel="process" aria-label="制作过程照片轮播">
+        <button class="carBtn carBtn--prev" type="button" aria-label="上一张">‹</button>
+
+        <div class="carTrack" tabindex="0">
+          <figure class="carSlide js-lightbox" data-large="images/process-1.jpg">
+            <img src="images/process-1.jpg" alt="制作过程照片 1" loading="lazy">
+            <figcaption>锻打与成型</figcaption>
+          </figure>
+          <figure class="carSlide js-lightbox" data-large="images/process-2.jpg">
+            <img src="images/process-2.jpg" alt="制作过程照片 2" loading="lazy">
+            <figcaption>修整与打磨</figcaption>
+          </figure>
+          <figure class="carSlide js-lightbox" data-large="images/process-3.jpg">
+            <img src="images/process-3.jpg" alt="制作过程照片 3" loading="lazy">
+            <figcaption>錾刻细节</figcaption>
+          </figure>
+          <figure class="carSlide js-lightbox" data-large="images/process-4.jpg">
+            <img src="images/process-4.jpg" alt="制作过程照片 4" loading="lazy">
+            <figcaption>退火与回火</figcaption>
+          </figure>
+          <figure class="carSlide js-lightbox" data-large="images/process-5.jpg">
+            <img src="images/process-5.jpg" alt="制作过程照片 5" loading="lazy">
+            <figcaption>整形与修边</figcaption>
+          </figure>
+          <figure class="carSlide js-lightbox" data-large="images/process-6.jpg">
+            <img src="images/process-6.jpg" alt="制作过程照片 6" loading="lazy">
+            <figcaption>抛光与光泽</figcaption>
+          </figure>
+          <figure class="carSlide js-lightbox" data-large="images/process-7.jpg">
+            <img src="images/process-7.jpg" alt="制作过程照片 7" loading="lazy">
+            <figcaption>成品呈现</figcaption>
+          </figure>
+        </div>
+
+        <button class="carBtn carBtn--next" type="button" aria-label="下一张">›</button>
+        <div class="carDots" aria-label="轮播分页"></div>
       </div>
     </section>
 

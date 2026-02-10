@@ -399,3 +399,91 @@ if (slides.length) {
 
   console.log("music listener attached!");
 })();
+
+
+/* ===== Process Carousel (scroll-snap + buttons + dots) ===== */
+function initCarousel(root) {
+  if (!root) return;
+  const track = root.querySelector(".carTrack");
+  const prevBtn = root.querySelector(".carBtn--prev");
+  const nextBtn = root.querySelector(".carBtn--next");
+  const slides = Array.from(root.querySelectorAll(".carSlide"));
+  const dotsWrap = root.querySelector(".carDots");
+
+  if (!track || slides.length === 0 || !dotsWrap) return;
+
+  // Build dots
+  dotsWrap.innerHTML = "";
+  const dots = slides.map((_, i) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "carDot";
+    b.setAttribute("aria-label", `第 ${i + 1} 张`);
+    b.setAttribute("aria-current", "false");
+    b.addEventListener("click", () => scrollToIndex(i));
+    dotsWrap.appendChild(b);
+    return b;
+  });
+
+  function scrollToIndex(i) {
+    const clamped = Math.max(0, Math.min(slides.length - 1, i));
+    const target = slides[clamped];
+    // scroll so that target is centered (approx)
+    const left = target.offsetLeft - (track.clientWidth - target.clientWidth) / 2;
+    track.scrollTo({ left, behavior: "smooth" });
+  }
+
+  function setActive(idx) {
+    slides.forEach((s, i) => {
+      s.classList.toggle("is-active", i === idx);
+      s.classList.toggle("is-near", Math.abs(i - idx) === 1);
+    });
+    dots.forEach((d, i) => d.setAttribute("aria-current", i === idx ? "true" : "false"));
+  }
+
+  // Observe which slide is mostly visible inside the track
+  let activeIndex = 0;
+  const io = new IntersectionObserver(
+    (entries) => {
+      // pick the entry with the highest intersection ratio
+      let best = null;
+      for (const e of entries) {
+        if (!best || e.intersectionRatio > best.intersectionRatio) best = e;
+      }
+      if (best && best.isIntersecting) {
+        const idx = slides.indexOf(best.target);
+        if (idx >= 0 && idx !== activeIndex) {
+          activeIndex = idx;
+          setActive(activeIndex);
+        }
+      }
+    },
+    { root: track, threshold: [0.55, 0.65, 0.75] }
+  );
+  slides.forEach((s) => io.observe(s));
+
+  // Buttons
+  if (prevBtn) prevBtn.addEventListener("click", () => scrollToIndex(activeIndex - 1));
+  if (nextBtn) nextBtn.addEventListener("click", () => scrollToIndex(activeIndex + 1));
+
+  // Keyboard (track focused)
+  track.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      scrollToIndex(activeIndex - 1);
+    }
+    if (e.key === "ArrowRight") {
+      e.preventDefault();
+      scrollToIndex(activeIndex + 1);
+    }
+  });
+
+  // Init state
+  setActive(0);
+  // Ensure first slide is centered if track has padding / layout shifts
+  requestAnimationFrame(() => scrollToIndex(0));
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".carousel").forEach(initCarousel);
+});
